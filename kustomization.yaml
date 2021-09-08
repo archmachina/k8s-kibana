@@ -1,0 +1,13 @@
+---
+
+resources:
+- service.yaml
+- deployment.yaml
+
+secretGenerator:
+  - name: kibana-elastic-cred
+    type: Opaque
+  - name: kibana-object-key
+    type: Opaque
+  - name: kibana-cert
+    type: kubernetes.io/tls

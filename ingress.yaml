@@ -9,17 +9,17 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
 spec:
   tls:
-  - hosts:
-    - "kibana.local"
-    secretName: kibana-cert
+    - hosts:
+        - "kibana.local"
+      secretName: kibana-cert
   rules:
-  - host: "kibana.local"
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: kibana-svc
-            port:
-              number: 5601
+    - host: "kibana.local"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: kibana-svc
+                port:
+                  number: 5601

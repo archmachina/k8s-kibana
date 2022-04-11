@@ -1,1 +1,1 @@
-# k8s-kibana
+# kustomize-kibana

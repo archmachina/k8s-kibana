@@ -1,0 +1,26 @@
+---
+
+kind: Kustomization
+
+secretGenerator:
+  - name: kibana-cert
+    type: kubernetes.io/tls
+
+  - name: kibana-credentials
+    type: Opaque
+    # literals:
+    #   - elastic_username=changeme
+    #   - elastic_password=changeme
+
+configMapGenerator:
+  - name: kibana-config
+    literals:
+      - fqdn=kibana.local
+      - replicas=1
+      - elasticwait_cert_verify=0
+      - elasticwait_time_wait=30
+      - elasticwait_max_attempts=15
+      - elasticwait_host=elastic-svc
+      - elasticwait_port=9200
+      - elastic_hosts=[\"https://elastic-svc:9200\"]
+      - publicbaseurl=https://kibana.local

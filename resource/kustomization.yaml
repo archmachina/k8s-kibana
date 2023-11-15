@@ -24,3 +24,8 @@ configMapGenerator:
       - elasticwait_port=9200
       - elastic_hosts=[\"https://elastic-svc:9200\"]
       - publicbaseurl=https://kibana.local
+      - ingress_host_port=5601
+
+  - name: kibana-files
+    files:
+      - ingress.cfg=files/ingress.cfg

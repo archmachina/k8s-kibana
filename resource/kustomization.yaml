@@ -3,8 +3,8 @@
 kind: Kustomization
 
 secretGenerator:
-  - name: kibana-cert
-    type: kubernetes.io/tls
+  - name: kibana-certs
+    type: Opaque
 
   - name: kibana-credentials
     type: Opaque

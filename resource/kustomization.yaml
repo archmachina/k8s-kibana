@@ -8,9 +8,10 @@ secretGenerator:
 
   - name: kibana-credentials
     type: Opaque
-    # literals:
-    #   - elastic_username=changeme
+    literals:
+      - elastic_username=kibana_system
     #   - elastic_password=changeme
+    #   - kibana_key=changeme
 
 configMapGenerator:
   - name: kibana-config

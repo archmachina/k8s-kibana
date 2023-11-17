@@ -23,7 +23,7 @@ configMapGenerator:
       - elasticwait_max_attempts=15
       - elasticwait_host=elastic-svc
       - elasticwait_port=9200
-      - elastic_hosts=[\"https://elastic-svc:9200\"]
+      - elastic_hosts=["https://elastic-svc:9200"]
       - publicbaseurl=https://kibana.local
       - ingress_host_port=5601
 

@@ -86,7 +86,7 @@ spec:
             - name: SERVER_PUBLICBASEURL
               valueFrom:
                 configMapKeyRef:
-                  name: elastic-config
+                  name: kibana-config
                   key: publicbaseurl
             - name: SERVER_SSL_CERTIFICATE
               value: /usr/share/kibana/config/certs/tls.crt

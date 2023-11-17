@@ -3,7 +3,7 @@
 kind: Kustomization
 
 secretGenerator:
-  - name: kibana-certs
+  - name: kibana-cert
     type: Opaque
 
   - name: kibana-credentials
